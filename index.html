@@ -39,18 +39,51 @@
 
         <div class="signal-card" aria-hidden="true">
           <div class="signal-top">
-            <span>INFRASTRUCTURE STATUS</span>
-            <span class="status">OPERATIONAL</span>
+            <span>NETWORK TOPOLOGY</span>
+            <span class="status"><span class="status-dot"></span>LINK STATUS: UP</span>
           </div>
-          <div class="diagram">
-            <div class="node node-a">EDGE</div>
-            <div class="line line-a"></div>
-            <div class="node node-b">CORE</div>
-            <div class="line line-b"></div>
-            <div class="node node-c">LAN</div>
+
+          <div class="topology-wrap">
+            <svg class="topology" viewBox="0 0 420 300" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="Animated network topology">
+              <g class="topology-links">
+                <line x1="210" y1="78" x2="80" y2="205" />
+                <line x1="210" y1="78" x2="210" y2="222" />
+                <line x1="210" y1="78" x2="340" y2="205" />
+              </g>
+              <g class="topology-pulses">
+                <line class="pulse pulse-1" x1="210" y1="78" x2="80" y2="205" />
+                <line class="pulse pulse-2" x1="210" y1="78" x2="210" y2="222" />
+                <line class="pulse pulse-3" x1="210" y1="78" x2="340" y2="205" />
+              </g>
+
+              <g class="topology-node topology-node-core">
+                <rect x="163" y="50" width="94" height="50" rx="10" />
+                <circle cx="181" cy="75" r="4" class="node-light" />
+                <text x="210" y="80" text-anchor="middle">CORE</text>
+              </g>
+
+              <g class="topology-node">
+                <rect x="35" y="198" width="90" height="46" rx="10" />
+                <circle cx="52" cy="221" r="4" class="node-light" />
+                <text x="80" y="226" text-anchor="middle">EDGE</text>
+              </g>
+
+              <g class="topology-node">
+                <rect x="165" y="215" width="90" height="46" rx="10" />
+                <circle cx="182" cy="238" r="4" class="node-light" />
+                <text x="210" y="243" text-anchor="middle">LAN</text>
+              </g>
+
+              <g class="topology-node">
+                <rect x="295" y="198" width="90" height="46" rx="10" />
+                <circle cx="312" cy="221" r="4" class="node-light" />
+                <text x="340" y="226" text-anchor="middle">CLOUD</text>
+              </g>
+            </svg>
           </div>
+
           <div class="signal-meta">
-            <div><span>ROUTING</span><strong>HEALTHY</strong></div>
+            <div><span>ROUTING</span><strong>CONVERGED</strong></div>
             <div><span>UPLINK</span><strong>ACTIVE</strong></div>
             <div><span>VISIBILITY</span><strong>ONLINE</strong></div>
           </div>
